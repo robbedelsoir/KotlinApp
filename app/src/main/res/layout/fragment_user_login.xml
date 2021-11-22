@@ -7,6 +7,7 @@
             name="viewModel"
             type="be.vives.mytodo.screens.userlogin.UserLoginModel" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,9 +39,9 @@
                     android:text="LOGIN"
                     android:textColor="#0083D0"
                     android:textSize="34sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/etLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -69,8 +70,7 @@
                     android:layout_margin="5dp"
                     android:text="Forgot password"
                     android:textAlignment="viewEnd"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </view>
@@ -109,7 +109,6 @@
             android:layout_height="143dp"
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/todo" />
