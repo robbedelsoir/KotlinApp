@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.main.MainFragment">
+    <data>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="mainModel"
+            type="be.vives.mytodo.screens.main.MainModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/btnNavigateToUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigeer naar gebruiker"
+            android:onClick="@{() -> mainModel.btnNavigateToUserClicked()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></Button>
+
+        <Button
+            android:id="@+id/btnNavigateToToDoDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigeer naar ToDo detail"
+            android:onClick="@{() -> mainModel.btnNavigateToToDoDetailClicked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNavigateToUser"></Button>
+        <Button
+            android:id="@+id/btnNavigateToToDoList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigeer naar ToDo lijst"
+            android:onClick="@{() -> mainModel.btnNavigateToToDoListClicked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNavigateToToDoDetail"></Button>
+
+        <TextView
+            android:id="@+id/tvUserWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text='@{TextUtils.isEmpty(mainModel.user.firstName) ? "" :@string/welcome(mainModel.user.firstName)}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyToDo</string>
+    <string name="userImage">User image</string>
+    <string name="nameUser">Name user</string>
+    <string name="lastnameUser">Lastname</string>
+    <string name="changePassword">Paswoord wijzigen</string>
+    <string name="userActive">Actief</string>
+    <string name="userNotActive">Niet actief</string>
+    <string name="assignedUserString">Toegekend aan %s %s</string>
+    <string name="createdUserString">Aangemaakt door %s %s</string>
+    <string name="finishedByUserString">Afgewerkt door %s %s</string>
+    <string name="toDoNumberString"># %d</string>
+    <string name="toDoTimeSpent">Tijd gespendeerd %s</string>
+    <string name="to_do_image">ToDO</string>
+    <string name="welcome">Welkom %s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
