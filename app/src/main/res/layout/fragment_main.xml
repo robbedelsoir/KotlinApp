@@ -27,23 +27,14 @@
             app:layout_constraintTop_toTopOf="parent"></Button>
 
         <Button
-            android:id="@+id/btnNavigateToToDoDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Navigeer naar ToDo detail"
-            android:onClick="@{() -> mainModel.btnNavigateToToDoDetailClicked()}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnNavigateToUser"></Button>
-        <Button
             android:id="@+id/btnNavigateToToDoList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Navigeer naar ToDo lijst"
             android:onClick="@{() -> mainModel.btnNavigateToToDoListClicked()}"
+            android:text="Navigeer naar ToDo lijst"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnNavigateToToDoDetail"></Button>
+            tools:layout_editor_absoluteY="438dp"></Button>
 
         <TextView
             android:id="@+id/tvUserWelcome"
