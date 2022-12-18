@@ -19,10 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.fragment_to_do_list)
 
         val database = FirebaseDatabase.getInstance().reference
-        database.setValue("Robbe")
-
-
-
 
         var todoList = mutableListOf(
             Todo("Delhaize","Ei" ,false),
