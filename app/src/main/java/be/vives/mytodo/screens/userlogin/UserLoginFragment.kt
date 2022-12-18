@@ -41,7 +41,7 @@ class UserLoginFragment : Fragment() {
             it?.let {
                 //(activity as UserActivity).setCurrentUser(it)
                 UserSingelton.instance().user = it
-                requireView().findNavController().navigate(UserLoginFragmentDirections.actionUserLoginFragmentToUserDetailFragment())
+
             }
         })
         viewModel.navigateBack.observe(viewLifecycleOwner, Observer {

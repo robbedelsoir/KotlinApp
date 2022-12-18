@@ -7,12 +7,22 @@ import android.widget.CheckBox
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.fragment_to_do_list)
+
+        val database = FirebaseDatabase.getInstance().reference
+        database.setValue("Robbe")
+
+
+
 
         var todoList = mutableListOf(
             Todo("Delhaize","Ei" ,false),
@@ -33,11 +43,31 @@ class MainActivity : AppCompatActivity() {
             val description = etTodoDescription.text.toString()
 
             val todo = Todo(title, description,false)
-            todoList.add(todo)
+            database.child(title).setValue(todo)
 
-            adapter.notifyItemInserted(todoList.size-1)
-            etTodo.setText("")
+
         }
+        //getdata from database
+        var getdata = object: ValueEventListener
+        {
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
 
+            override fun onDataChange(snapshot: DataSnapshot) {
+               var sb = StringBuilder()
+                for (i in snapshot.children){
+                    var title = i.child("title").getValue()
+                    var description = i.child("description").getValue()
+                    var IsChecked = i.child("IsChecked").getValue()
+                    sb.append("${i.key} $title $description $IsChecked")
+                }
+                adapter.notifyItemInserted(todoList.size-1)
+                etTodo.setText(sb)
+            }
+
+        }
+        database.addValueEventListener(getdata)
+        database.addListenerForSingleValueEvent(getdata)
+        }
     }
-}

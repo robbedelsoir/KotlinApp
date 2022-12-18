@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "257910177358",
+    "project_id": "todo-c6c22",
+    "storage_bucket": "todo-c6c22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257910177358:android:219f7958b21d8565770d1f",
+        "android_client_info": {
+          "package_name": "be.vives.mytodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257910177358-pgacjgv21vgu875ccsim4l52fvl663bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjqeQIadyBknq6LWJ-M7rxnN1qjzCZIZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257910177358-pgacjgv21vgu875ccsim4l52fvl663bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,9 +7,10 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'androidx.navigation.safeargs'
 
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
     buildToolsVersion "29.0.2"
     
     compileOptions {
@@ -24,7 +25,7 @@ android {
     defaultConfig {
         applicationId "be.vives.mytodo"
         minSdkVersion 26
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -51,7 +52,9 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
 }
